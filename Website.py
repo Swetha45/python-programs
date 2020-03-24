@@ -1,18 +1,20 @@
 import urllib
 import re
-url = input("Please enter your base url: ")
-paramCount = int(input("How many params you want add to url: " ))
-if paramCount >= 1:
-    url = url + "?"
-    for count in range(0, paramCount):
+name=input("Please enter your string here: ")
+text= "?"
+params=int(input("How many params you want: " ))
+if params>=1:
+    name=name+text
+    for x in range(0, params):
         p1 = input("Enter your params name: ")
-        url = url + p1 + "="
+        name = name + p1 +"="
         p2 = input("Please enter pa values: ")
-        url = url + p2
-        if count != paramCount - 1:
-            url = url + "&"
-    print("Parameterized URL string: " + url)
+        name = name + p2
+        if x != params-1:
+            name = name + "&"
+            print("The total params value is: ", params)
+    print("Final string is: " + name)
 else:
-    print("Parameterized URL string: " + url)
+    print("The last string values is: " + name)
 
 
