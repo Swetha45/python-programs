@@ -2,7 +2,8 @@ import urllib
 import re
 
 url = input("Please enter base url: ")
-paramCount = int(input("How many params you want in url: "))
+paramCount = int(input("How many params yo"
+                       "want in url: "))
 if paramCount >= 1:
     url = url + "?"
     for count in range(0, paramCount):
