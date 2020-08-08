@@ -26,6 +26,6 @@ while isContinue:
             result = division(firstnumber, secondnumber)
     print("The result is: {}".format(result))
 
-    userdecision = input("Do you want to continue/exit (cn/ex) : ")
-    if userdecision == 'ex':
+    userdecision = input("Do you want to continue (yes/no)? : ")
+    if userdecision == 'no':
         exit()
