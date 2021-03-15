@@ -147,16 +147,15 @@ if intersetions == counter1:
 else:
     print("Not Possible to Rearrange")
 
-
 # 11Q: Remove all duplicates words from a given sentence
-from  collections import Counter
-string = "Geeks for Geeks"
-split1 = string.split(" ")
-for i in range(0, len(split1)):
-        split1[i] = "".join(split1[i])
-#joinstring = "".join(split1)
-counter1 = Counter(split1)
-s = "".join(counter1.keys())
-print(s)
+from collections import Counter
+string = 'Geeks For Geeks'
+def remove_duplicate_words(string):
+    wordList = string.split(" ")
+    wordCountDict = Counter(wordList)
+    uniqueWordString = " ".join(wordCountDict.keys())
+    return uniqueWordString
+print(remove_duplicate_words(string))
+
 
 
