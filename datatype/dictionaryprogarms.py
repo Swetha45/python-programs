@@ -1,22 +1,22 @@
-# # 1 Sort Python Dictionaries by Key or Value
-# method 1-- sorted dict
+# 1Q: Sort Python Dictionaries by Key or Value
+    # method 1-- sorted dict
 dictionary = {'name': 455, 'age': 20, 'education' : 12}
 for value in sorted(dictionary.keys()):
     print("The keys are:", value)
 for key in sorted(dictionary):
     print((key, dictionary[key]), end = " ")
 
-# method 2 -- OrderedDict
+     # method 2 -- OrderedDict
 from collections import OrderedDict
 
 dictionary = {'name': 'xxx', 'age': '19', 'education': 'bachelor'}
 dict1 = OrderedDict(sorted(dictionary.items()))
 print(dict1)
 
-# 2 Handling missing keys in Python dictionaries
+# 2Q: Handling missing keys in Python dictionaries
 
-#Method  get(key, defaultvalue)
-#
+    # method 1 get(key, defaultvalue)
+
 def missingkeys(dictionary):
     getmethod = dictionary.get('age', 'value not found')
     getvalue = dictionary.get('ageee', 'value not found')
@@ -25,7 +25,7 @@ def missingkeys(dictionary):
 dictionary = {'name': 'xxx', 'age': '19', 'education': 'bachelor'}
 missingkeys(dictionary)
 
-# setdefault() Method
+     # method 2 setdefault()
 
 def missingkeys(dictionary):
     print("the original dictioanry is : ", dictionary)
@@ -37,7 +37,8 @@ dictionary = {'name': 'xxx', 'age': '19', 'education': 'bachelor'}
 missingkeys(dictionary)
 print("After changes the dictionary is: ", dictionary)
 
-# defaultdict method
+      # method 3 defaultdict
+
 import collections
 countrydict = collections.defaultdict(lambda : 'key not found')
 #countrydict = {"India": "IN", 'USA': 'US', 'Canada': 'can'}
@@ -46,7 +47,7 @@ countrydict['USA'] = 'ua'
 print(countrydict["india"])
 print(countrydict['ll'])
 
-# sigle key hild a multiple values
+# 3Q: sigle key hold a multiple values
 
 colorsdict = {'green' : ('gr', 'g', 'light green'),
               'yellow': ('ye', 'y', 'light yellow'),
@@ -57,7 +58,7 @@ print("The value index of yellow key is: ", colorsdict['yellow'][1])
 print("The value index of pink key is: ", colorsdict['pink'][2])
 
 
-# find the sum of all items in a dictionary
+# 4Q: Find the sum of all items in a dictionary
 numbersdict = {'key1': 5, 'key2':10, 'key3':15, 'key4' : 20}
 sum = 0
 result = 0
@@ -70,7 +71,7 @@ for val in numbersdict.values():
 print("The result is: ", result )
 
 
-# Ways to remove a key from dictionary
+# 5Q: Remove a key from dictionary
 
 numbersdictt = {'key1': 5, 'key2':10, 'key3':15, 'key4' : 20}
 del numbersdictt['key1']
@@ -80,7 +81,8 @@ numbersdictt.popitem()
 numbersdictt.clear()
 print("After removing a key result : ", numbersdictt)
 
-# Merging two Dictionaries
+#  6Q: how to merge two Dictionaries
+    # Method 1
 #1. update
 dictionary1 = {'key1': 5, 'key2':10, 'key3':15, 'key4' : 20}
 dictionary2 = {'key5': 90, 'key7' : 100}
@@ -93,9 +95,8 @@ dictionary2 = {'key5': 90, 'key7' : 100}
 dictionary3 = {**dictionary2, **dictionary1}
 print(dictionary3)
 
-# Convert a list of Tuples into Dictionary
-# method 1 : setdefault
-
+# 7Q: Convert a list of Tuples into Dictionary
+       # Method 1 : setdefault
 dictionary1 = [("A", 10), ("B", 20), ("c", 30)]
 dictionary2 = dict(())
 for key, value in dictionary1:
@@ -103,15 +104,13 @@ for key, value in dictionary1:
     result.append(value)
 print(dictionary2)
 
- # method 2 -- dict()
+        # Method 2  dict()
 
 dictionary1 = [("A", 10), ("B", 20), ("c", 30)]
 print(dict(dictionary1))
 
-
-# Find all duplicate characters in string
-
-# use Counter()
+# 8Q: Find all duplicate characters in string
+      # Method 1 Counter()
 
 from collections import Counter
 namestring ="duppcharrss"
@@ -121,7 +120,7 @@ for key, value in countermethod.items():
         print(key, end = " ")
 
 
-# 11. Find common elements in three sorted arrays by dictionary intersection
+# 9Q: Find common elements in three sorted arrays by dictionary intersection
 
 from collections import Counter
 ar1 = [1, 50, -12, 90, 67, 89]
@@ -135,7 +134,7 @@ intersection = (dict1.items() & dict2.items() & dict3.items())
 for key, value in intersection:
     print(key, end = " ")
 
-# Python counter and dictionary intersection example (Make a string using deletion and rearrangement)
+# 10Q: Python counter and dictionary intersection example (Make a string using deletion and rearrangement)
 
 from collections import Counter
 string1 = 'AAABBBCCC'
@@ -149,7 +148,7 @@ else:
     print("Not Possible to Rearrange")
 
 
-# Remove all duplicates words from a given sentence
+# 11Q: Remove all duplicates words from a given sentence
 from  collections import Counter
 string = "Geeks for Geeks"
 split1 = string.split(" ")
