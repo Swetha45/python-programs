@@ -1,3 +1,4 @@
+
 import program
 class RandomDice:
     def __init__(self):
